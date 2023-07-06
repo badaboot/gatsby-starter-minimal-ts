@@ -23,11 +23,12 @@ export const Basic: any = () => {
         {images.map((path) => {
           const isVertical = path.startsWith('v');
           const [width, height] = [800, isVertical ? 800 : 500];
+          const imgPath = `../images/${path}`;
           return (
             <Item
               key={path}
-              original={`../images/${path}`}
-              thumbnail={`../images/${path}`}
+              original={imgPath}
+              thumbnail={imgPath}
               width={width}
               height={height}
               alt={path}
@@ -37,7 +38,7 @@ export const Basic: any = () => {
               {({ ref, open }) => (
                 <img
                   style={{ cursor: "pointer" }}
-                  src={`../images/${path}`}
+                  src={imgPath}
                   ref={ref as React.MutableRefObject<HTMLImageElement>}
                   onClick={open}
                   width={171}
