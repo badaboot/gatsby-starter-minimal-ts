@@ -3,50 +3,39 @@ import * as React from 'react'
 import { getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import 'photoswipe/dist/photoswipe.css'
-import { Gallery, Item } from 'react-photoswipe-gallery'
+import Gallery from '../gallery'
+import { Gallery as PhotoGallery, Item } from 'react-photoswipe-gallery'
 import Layout from '../components/layout'
-// import PhotoSwipeLightbox from 'photoswipe'
-
-// const lightbox = new PhotoSwipeLightbox({
-//   gallery: '#gallery--test-closing-events',
-//   children: 'a',
-//   pswpModule: () => import('../../node_modules/photoswipe/dist/photoswipe.esm.js')
-// });
-// lightbox.on('close', () => {
-//   // PhotoSwipe starts to close, unbind most events here
-//   console.log('close');
-// });
-// lightbox.on('destroy', () => {
-//   // PhotoSwipe is fully closed, destroy everything
-//   console.log('destroy');
-// });
-// lightbox.init();
-
+ 
 const MyGallery = ({ images }) => {
-  return <Gallery>
+  return <PhotoGallery id="my-gallery">
     <div>
-      {images.map((img) => {
+
+      {images.map((img, index) => {
+        // URLs for full width images
         const mainSrc = img?.full?.images?.fallback?.src
         const thumbImage = getImage(img.thumb)
         const thumbUrl = thumbImage?.images?.fallback?.src
-        return <Item
+        return <Item<HTMLImageElement>
           key={img.name}
+          alt={img.name}
           original={mainSrc}
           thumbnail={thumbUrl}
           width={img?.full?.width}
           height={img?.full?.height}
+          id={img.name}
         >
           {({ ref, open }) => (
             <img ref={ref}
+              style={{ cursor: 'pointer' }}
               onClick={open} src={thumbUrl} />
           )}
         </Item>
       })}
     </div>
 
-  </Gallery>
+  </PhotoGallery>
 }
-
 interface ImageSharpEdge {
   node: {
     childImageSharp: {
@@ -77,7 +66,9 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <p>Filters: </p>
-      <MyGallery images={images} /> 
+
+      <MyGallery images={images} />
+      {/* <Gallery /> */}
     </Layout>
   )
 }
@@ -92,7 +83,10 @@ export const pageQuery = graphql`
         node {
           dir
           modifiedTime
-          childImageSharp { 
+          childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
             thumb: gatsbyImageData(
               width: 270
               height: 270
