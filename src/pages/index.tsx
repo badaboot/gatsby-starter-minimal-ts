@@ -27,7 +27,7 @@ const MyGallery = ({ images }) => {
         >
           {({ ref, open }) => (
             <img ref={ref}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', marginLeft: 8 }}
               onClick={open} src={thumbUrl} />
           )}
         </Item>
@@ -88,8 +88,8 @@ export const pageQuery = graphql`
             ...GatsbyImageSharpFixed
           }
             thumb: gatsbyImageData(
-              width: 270
-              height: 270
+              width: 150
+              height: 150
               placeholder: BLURRED
             )
             full: gatsbyImageData(
