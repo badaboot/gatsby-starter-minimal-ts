@@ -29,8 +29,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     ...node.childImageSharp,
     dir: node.dir,
     modifiedTime: node.modifiedTime,
-    // Generate name based on the index as caption.
-    caption: `Image ${index}`,
     name: node.childImageSharp.full?.images.fallback.src.split('/').pop() 
   }))
 

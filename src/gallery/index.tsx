@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import Lightbox from 'react-image-lightbox'
 import styled from 'styled-components'
@@ -13,10 +13,7 @@ export interface ImageProp {
   thumb: IGatsbyImageData
   thumbAlt?: string
   title?: React.ReactNode
-  caption?: React.ReactNode
-  name: string | undefined,
-  dir: string,
-  modifiedTime: string,
+  name?: React.ReactNode
 }
 
 export interface GalleryProps {
@@ -43,15 +40,12 @@ const Gallery: FC<GalleryProps> = ({
   rowMargin = -15,
   imgClass = '',
   lightboxOptions = {},
-  onClose = () => {
-  },
+  onClose = () => { },
   customWrapper = ImageColWrapper,
 }) => {
-  const searchParams = new URLSearchParams(window.location.search);
-  const isOpen = searchParams.get('isOpen') === 'true'
-console.log(isOpen)
+  const [index, setIndex] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const index = Number(searchParams.get('index')) || 0
   const prevIndex = (index + images.length - 1) % images.length
   const nextIndex = (index + images.length + 1) % images.length
   const ImgColWrapper = customWrapper
@@ -63,12 +57,16 @@ console.log(isOpen)
 
   const onCloseLightbox = () => {
     onClose()
+    setIsOpen(false)
+    const url = new URL(window.location.href);
+    url.search = '';
+    window.history.replaceState(null, '', url);
   }
 
   return (
     <React.Fragment>
       <Row margin={rowMargin}>
-        {images.reverse().map((img, imgIndex) => {
+        {images.map((img, imgIndex) => {
           const thumbImage = getImage(img.thumb)
           if (!thumbImage) {
             return null
@@ -79,12 +77,12 @@ console.log(isOpen)
               mdColWidth={mdColWidth}
               key={imgIndex}
               onClick={() => {
-                const { name } = images[imgIndex]
+                setIsOpen(true)
+                setIndex(imgIndex)
                 const url = new URL(window.location.href);
                 url.searchParams.set('isOpen', 'true');
-                url.searchParams.set('id', imgIndex.toString());
-                if (name) url.searchParams.set('name', name);
-                window.location.href = url
+                url.searchParams.set('name', images[imgIndex].name);
+                window.history.pushState(null, '', url);
               }}
               gutter={gutter}
             >
@@ -98,25 +96,25 @@ console.log(isOpen)
         })}
       </Row>
       {isOpen && (
-        <StyledLightbox key={isOpen}
+        <StyledLightbox
           mainSrc={mainSrc || ''}
           nextSrc={nextSrc || ''}
           prevSrc={prevSrc || ''}
           onCloseRequest={onCloseLightbox}
           onMovePrevRequest={() => {
-            const url = new URL(window.location.href);            
-            url.searchParams.set('id', prevIndex.toString());
+            setIndex(prevIndex)
+            const url = new URL(window.location.href);
+            url.searchParams.set('name', images[prevIndex].name);
             window.history.pushState(null, '', url);
           }}
           onMoveNextRequest={() => {
-            const { name } = images[nextIndex]
-            const url = new URL(window.location.href);            
-            url.searchParams.set('id', nextIndex.toString());
-            if (name) url.searchParams.set('name', name);
+            setIndex(nextIndex)
+            const url = new URL(window.location.href);
+            url.searchParams.set('name', images[nextIndex].name);
             window.history.pushState(null, '', url);
           }}
           imageTitle={images[index].title}
-          imageCaption={images[index].caption}
+          imageCaption={images[index].name}
           {...lightboxOptions}
         />
       )}
