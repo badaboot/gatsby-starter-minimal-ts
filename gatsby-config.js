@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Example for Gallery`,
-    description: `Just a simple example page to demo the gatsby-image-gallery.`,
-    author: `@browniebroke`,
+    title: `Anny's comics`,
+    description: `Gallery of comics.`,
+    author: `@badaboot`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

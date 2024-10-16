@@ -3,6 +3,7 @@ import * as React from 'react'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import Gallery from '../gallery'
+import Layout from '../components/layout'
 
 interface ImageSharpEdge {
   node: {
@@ -51,14 +52,14 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   }
 
   return (
-    <div>
+    <Layout>
       <p>Filters: </p>
       <Gallery
         images={images}
         lightboxOptions={lightboxOptions}
         onClose={onClose}
       />
-    </div>
+    </Layout>
   )
 }
 

@@ -8,7 +8,6 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -23,7 +22,6 @@ const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
             textDecoration: `none`,
           }}
         >
