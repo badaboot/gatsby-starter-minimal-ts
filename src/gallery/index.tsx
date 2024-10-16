@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import Lightbox from 'react-image-lightbox'
 import styled from 'styled-components'
@@ -14,7 +14,7 @@ export interface ImageProp {
   thumbAlt?: string
   title?: React.ReactNode
   caption?: React.ReactNode
-  name: string,
+  name: string | undefined,
   dir: string,
   modifiedTime: string,
 }
@@ -47,10 +47,11 @@ const Gallery: FC<GalleryProps> = ({
   },
   customWrapper = ImageColWrapper,
 }) => {
-  const [index, setIndex] = useState(0)
-  const url = new URL(window.location.href);
-  const isOpen = url.searchParams.get('isOpen')
+  const searchParams = new URLSearchParams(window.location.search);
+  const isOpen = searchParams.get('isOpen') === 'true'
+console.log(isOpen)
 
+  const index = Number(searchParams.get('index')) || 0
   const prevIndex = (index + images.length - 1) % images.length
   const nextIndex = (index + images.length + 1) % images.length
   const ImgColWrapper = customWrapper
@@ -81,9 +82,9 @@ const Gallery: FC<GalleryProps> = ({
                 const { name } = images[imgIndex]
                 const url = new URL(window.location.href);
                 url.searchParams.set('isOpen', 'true');
+                url.searchParams.set('id', imgIndex.toString());
                 if (name) url.searchParams.set('name', name);
-                window.history.replaceState(null, '', url);
-                setIndex(imgIndex)
+                window.location.href = url
               }}
               gutter={gutter}
             >
@@ -97,19 +98,22 @@ const Gallery: FC<GalleryProps> = ({
         })}
       </Row>
       {isOpen && (
-        <StyledLightbox
+        <StyledLightbox key={isOpen}
           mainSrc={mainSrc || ''}
           nextSrc={nextSrc || ''}
           prevSrc={prevSrc || ''}
           onCloseRequest={onCloseLightbox}
-          onMovePrevRequest={() => setIndex(prevIndex)}
+          onMovePrevRequest={() => {
+            const url = new URL(window.location.href);            
+            url.searchParams.set('id', prevIndex.toString());
+            window.history.pushState(null, '', url);
+          }}
           onMoveNextRequest={() => {
             const { name } = images[nextIndex]
-            setIndex(nextIndex)
-            const url = new URL(window.location.href);
-            // TODO: ideally do file name
+            const url = new URL(window.location.href);            
+            url.searchParams.set('id', nextIndex.toString());
             if (name) url.searchParams.set('name', name);
-            window.history.replaceState(null, '', url);
+            window.history.pushState(null, '', url);
           }}
           imageTitle={images[index].title}
           imageCaption={images[index].caption}

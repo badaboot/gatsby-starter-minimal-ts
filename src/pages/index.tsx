@@ -30,7 +30,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     modifiedTime: node.modifiedTime,
     // Generate name based on the index as caption.
     caption: `Image ${index}`,
-    name: node.childImageSharp.full?.images.fallback.src.split('/').pop()
+    name: node.childImageSharp.full?.images.fallback.src.split('/').pop() 
   }))
 
   // Override some of Lightbox options to localise labels in French
