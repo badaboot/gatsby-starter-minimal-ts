@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 function setQueryStringParameter(name, value) {
   const params = new URLSearchParams(window.location.search);
   params.set(name, value);
-  window.history.replaceState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));
+  window.history.pushState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));
 }
 
 const MyGallery = ({ images }) => {
@@ -83,7 +83,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       })} <span className='clear' onClick={() => {
         setFilter('')
         // removes all queries
-        window.history.replaceState(null, '', window.location.pathname);
+        window.history.pushState(null, '', window.location.pathname);
       }}>Clear</span></div>
       <MyGallery images={filteredImages} />
     </Layout>

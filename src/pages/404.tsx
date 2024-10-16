@@ -33,7 +33,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            Check out comics <Link to="/">here</Link>.
             <br />
           </>
         ) : null}
