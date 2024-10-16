@@ -76,6 +76,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   
   return (
     <Layout>
+      <p>Click on an image to see detail. Click on a filter to filter images.</p>
       <div className='filterBar'>Filters: {folders.map(f => {
         return <span className={f === filter ? 'selected' : 'filter'}
           key={f} onClick={() => {
