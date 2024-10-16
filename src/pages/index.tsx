@@ -13,16 +13,15 @@ const MyGallery = ({ images }) => {
 
       {images.map((img, index) => {
         // URLs for full width images
-        const mainSrc = img?.full?.images?.fallback?.src
         const thumbImage = getImage(img.thumb)
         const thumbUrl = thumbImage?.images?.fallback?.src
         return <Item<HTMLImageElement>
           key={img.name}
           alt={img.name}
-          original={mainSrc}
+          original={img.fixed.src}
           thumbnail={thumbUrl}
-          width={img?.full?.width}
-          height={img?.full?.height}
+          width={img?.fixed?.width}
+          height={img?.fixed?.height}
           id={img.name}
         >
           {({ ref, open }) => (
@@ -63,12 +62,48 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     name: node.childImageSharp?.full?.images?.fallback?.src.split('/').pop()
   }))
 
+  const dummyImages = [
+    {
+      largeURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg',
+      thumbnailURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg',
+      width: 1875,
+      height: 2500,
+    },
+    {
+      largeURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg',
+      thumbnailURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg',
+      width: 1669,
+      height: 2500,
+    },
+    {
+      largeURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg',
+      thumbnailURL:
+        'https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg',
+      width: 2500,
+      height: 1666,
+    },
+  ]
+  const slimmedData = images.map(img => {
+    return {
+      largeURL: img.fixed.src,
+      thumbnailURL: img.thumb.images.fallback?.src,
+      width: img.fixed.width,
+      height: img.fixed.height,
+    }
+  })
+  const names = images.map(i => i.name).sort()
+  console.log(names)
   return (
     <Layout>
       <p>Filters: </p>
 
       <MyGallery images={images} />
-      {/* <Gallery /> */}
+      {/* <Gallery images={slimmedData} galleryID="my-test-gallery"/> */}
     </Layout>
   )
 }
