@@ -1,9 +1,51 @@
 import { graphql } from 'gatsby'
 import * as React from 'react'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import Gallery from '../gallery'
+import 'photoswipe/dist/photoswipe.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 import Layout from '../components/layout'
+// import PhotoSwipeLightbox from 'photoswipe'
+
+// const lightbox = new PhotoSwipeLightbox({
+//   gallery: '#gallery--test-closing-events',
+//   children: 'a',
+//   pswpModule: () => import('../../node_modules/photoswipe/dist/photoswipe.esm.js')
+// });
+// lightbox.on('close', () => {
+//   // PhotoSwipe starts to close, unbind most events here
+//   console.log('close');
+// });
+// lightbox.on('destroy', () => {
+//   // PhotoSwipe is fully closed, destroy everything
+//   console.log('destroy');
+// });
+// lightbox.init();
+
+const MyGallery = ({ images }) => {
+  return <Gallery>
+    <div>
+      {images.map((img) => {
+        const mainSrc = img?.full?.images?.fallback?.src
+        const thumbImage = getImage(img.thumb)
+        const thumbUrl = thumbImage?.images?.fallback?.src
+        return <Item
+          key={img.name}
+          original={mainSrc}
+          thumbnail={thumbUrl}
+          width={img?.full?.width}
+          height={img?.full?.height}
+        >
+          {({ ref, open }) => (
+            <img ref={ref}
+              onClick={open} src={thumbUrl} />
+          )}
+        </Item>
+      })}
+    </div>
+
+  </Gallery>
+}
 
 interface ImageSharpEdge {
   node: {
@@ -29,34 +71,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     ...node.childImageSharp,
     dir: node.dir,
     modifiedTime: node.modifiedTime,
-    name: node.childImageSharp.full?.images.fallback.src.split('/').pop() 
+    name: node.childImageSharp?.full?.images?.fallback?.src.split('/').pop()
   }))
-
-  // Override some of Lightbox options to localise labels in French
-  const lightboxOptions = {
-    imageLoadErrorMessage: 'Impossible de charger cette image',
-    nextLabel: 'Image suivante',
-    prevLabel: 'Image précédente',
-    zoomInLabel: 'Zoomer',
-    zoomOutLabel: 'Dézoomer',
-    closeLabel: 'Fermer',
-  }
-
-  //Add callback to Lightbox onCloseRequest
-  const onClose = () => {
-    const url = new URL(window.location.href);
-    url.search = '';
-    window.history.replaceState(null, '', url);
-  }
 
   return (
     <Layout>
       <p>Filters: </p>
-      <Gallery
-        images={images}
-        lightboxOptions={lightboxOptions}
-        onClose={onClose}
-      />
+      <MyGallery images={images} /> 
     </Layout>
   )
 }
@@ -71,13 +92,16 @@ export const pageQuery = graphql`
         node {
           dir
           modifiedTime
-          childImageSharp {
+          childImageSharp { 
             thumb: gatsbyImageData(
               width: 270
               height: 270
               placeholder: BLURRED
             )
-            full: gatsbyImageData(layout: FULL_WIDTH)
+            full: gatsbyImageData(
+              width: 700
+              layout: CONSTRAINED
+            )
           }
         }
       }
