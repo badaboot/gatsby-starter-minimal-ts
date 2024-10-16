@@ -10,24 +10,12 @@ const MyGallery = ({ images }) => {
   return <PhotoGallery withCaption id="my-gallery">
     <div>
       {images.map((img) => {
-        // URLs for full width images
-        const thumbImage = getImage(img.thumb)
-        const thumbUrl = thumbImage?.images?.fallback?.src
-        let src = ''
-        let width = 0
-        let height = 0
-        // on mobile devices
-        if (img.fixed.width > img.full.width) {
-          src = img.full.src
-          width = img.full.width
-          height = img.full.height
-        } else {
-          src = img.fixed.src
-          width = img.fixed.width
-          height = img.fixed.height
-        }
+        const thumbUrl = img.thumb?.images?.fallback?.src 
+        const {width, height, images} = img.full
+        const mainUrl = images.fallback.src
+        
         return <Item<HTMLImageElement>
-          original={src}
+          original={mainUrl}
           thumbnail={thumbUrl}
           width={width}
           height={height}
@@ -51,7 +39,7 @@ interface ImageSharpEdge {
   node: {
     childImageSharp: {
       thumb: IGatsbyImageData
-      full: IGatsbyImageData
+      fluid: IGatsbyImageData
     }
     dir
     modifiedTime
@@ -71,7 +59,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     ...node.childImageSharp,
     dir: node.dir,
     modifiedTime: node.modifiedTime,
-    name: node.childImageSharp?.full?.images?.fallback?.src.split('/').pop()
+    name: node.childImageSharp.thumb?.images.fallback?.src.split('/').pop()
   }))
   
   return (
@@ -93,17 +81,14 @@ export const pageQuery = graphql`
           dir
           modifiedTime
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
-            }
+            full: gatsbyImageData(
+            layout: FIXED
+            width: 700
+            )
             thumb: gatsbyImageData(
               width: 150
               height: 150
               placeholder: BLURRED
-            )
-            full: gatsbyImageData(
-              width: 700
-              layout: CONSTRAINED
             )
           }
         }
