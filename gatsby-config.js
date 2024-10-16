@@ -1,4 +1,7 @@
 module.exports = {
+  // flags: {
+  //   DEV_SSR: true
+  // },
   siteMetadata: {
     title: `Anny's comics`,
     description: `Gallery of comics.`,
