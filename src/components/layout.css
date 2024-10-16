@@ -39,6 +39,29 @@ progress {
 template {
   display: none;
 }
+.filterBar {
+  margin: 12px 0;
+}
+.selected {
+  background: darkslategray;
+  color: white;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.filter {
+  background: lightgray;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.clear {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;

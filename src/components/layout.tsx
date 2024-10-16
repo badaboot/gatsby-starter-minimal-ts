@@ -7,7 +7,6 @@
 
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import Header from './header'
 import './layout.css'
 
@@ -24,6 +23,7 @@ const Layout: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 
   return (
     <>
+    <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
