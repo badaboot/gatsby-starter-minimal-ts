@@ -39,7 +39,7 @@ interface ImageSharpEdge {
   node: {
     childImageSharp: {
       thumb: IGatsbyImageData
-      fluid: IGatsbyImageData
+      full: IGatsbyImageData
     }
     dir
     modifiedTime
@@ -66,7 +66,6 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     <Layout>
       <p>Filters: </p>
       <MyGallery images={images} />
-      {/* <Gallery images={slimmedData} galleryID="my-test-gallery"/> */}
     </Layout>
   )
 }
