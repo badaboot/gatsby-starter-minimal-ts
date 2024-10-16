@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import * as React from 'react'
-import { getImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import 'photoswipe/dist/photoswipe.css'
 import { Gallery as PhotoGallery, Item } from 'react-photoswipe-gallery'
@@ -16,7 +16,6 @@ const MyGallery = ({ images }) => {
         
         return <Item<HTMLImageElement>
           original={mainUrl}
-          thumbnail={thumbUrl}
           width={width}
           height={height}
           key={img.name}
@@ -24,6 +23,7 @@ const MyGallery = ({ images }) => {
           id={img.name}
           caption={img.name}
         >
+          {/* thumbnail */}
           {({ ref, open }) => (
             <img ref={ref}
               style={{ cursor: 'pointer', marginLeft: 8 }}
