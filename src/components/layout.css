@@ -42,20 +42,21 @@ template {
 .filterBar {
   margin: 12px 0;
 }
+.filterBar span {
+  white-space:nowrap;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  line-height: 40px;
+}
 .selected {
   background: darkslategray;
   color: white;
-  padding: 8px;
-  margin-right: 8px;
-  border-radius: 12px;
-  cursor: pointer;
 }
 .filter {
   background: lightgray;
-  padding: 8px;
-  margin-right: 8px;
-  border-radius: 12px;
-  cursor: pointer;
+  color: black;
 }
 .clear {
   text-decoration: underline;
