@@ -14,6 +14,9 @@ export interface ImageProp {
   thumbAlt?: string
   title?: React.ReactNode
   caption?: React.ReactNode
+  name: string,
+  dir: string,
+  modifiedTime: string,
 }
 
 export interface GalleryProps {
@@ -64,7 +67,7 @@ const Gallery: FC<GalleryProps> = ({
   return (
     <React.Fragment>
       <Row margin={rowMargin}>
-        {images.map((img, imgIndex) => {
+        {images.reverse().map((img, imgIndex) => {
           const thumbImage = getImage(img.thumb)
           if (!thumbImage) {
             return null
@@ -75,13 +78,9 @@ const Gallery: FC<GalleryProps> = ({
               mdColWidth={mdColWidth}
               key={imgIndex}
               onClick={() => {
+                const { name } = images[imgIndex]
                 const url = new URL(window.location.href);
                 url.searchParams.set('isOpen', 'true');
-                let name: string | undefined = ''
-                if (images[imgIndex].full && images[imgIndex].full.images && images[imgIndex].full.images.fallback) {
-                  name = images[imgIndex].full.images.fallback.src.split('/').pop()
-                }
-
                 if (name) url.searchParams.set('name', name);
                 window.history.replaceState(null, '', url);
                 setIndex(imgIndex)
@@ -105,11 +104,7 @@ const Gallery: FC<GalleryProps> = ({
           onCloseRequest={onCloseLightbox}
           onMovePrevRequest={() => setIndex(prevIndex)}
           onMoveNextRequest={() => {
-            let name: string | undefined = ''
-            if (images[nextIndex].full && images[nextIndex].full.images && images[nextIndex].full.images.fallback) {
-              name = images[nextIndex].full.images.fallback.src.split('/').pop()
-            }
-
+            const { name } = images[nextIndex]
             setIndex(nextIndex)
             const url = new URL(window.location.href);
             // TODO: ideally do file name

@@ -10,6 +10,8 @@ interface ImageSharpEdge {
       thumb: IGatsbyImageData
       full: IGatsbyImageData
     }
+    dir
+    modifiedTime
   }
 }
 
@@ -24,8 +26,11 @@ interface PageProps {
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   const images = data.images.edges.map(({ node }, index) => ({
     ...node.childImageSharp,
+    dir: node.dir,
+    modifiedTime: node.modifiedTime,
     // Generate name based on the index as caption.
     caption: `Image ${index}`,
+    name: node.childImageSharp.full?.images.fallback.src.split('/').pop()
   }))
 
   // Override some of Lightbox options to localise labels in French
@@ -41,16 +46,19 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   //Add callback to Lightbox onCloseRequest
   const onClose = () => {
     const url = new URL(window.location.href);
-    url.search = ''; 
+    url.search = '';
     window.history.replaceState(null, '', url);
   }
 
-  return ( 
+  return (
+    <div>
+      <p>Filters: </p>
       <Gallery
         images={images}
         lightboxOptions={lightboxOptions}
         onClose={onClose}
-      /> 
+      />
+    </div>
   )
 }
 
@@ -58,10 +66,12 @@ export const pageQuery = graphql`
   query ImagesForGallery {
     images: allFile(
       filter: { relativeDirectory: { eq: "gallery" } }
-      sort: { name: ASC }
-    ) {
+      sort: { modifiedTime: DESC }
+    ) { 
       edges {
         node {
+          dir
+          modifiedTime
           childImageSharp {
             thumb: gatsbyImageData(
               width: 270
