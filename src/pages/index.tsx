@@ -60,7 +60,8 @@ interface PageProps {
 }
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const [filter, setFilter] = React.useState('')
+  const params = new URLSearchParams(window.location.search);
+  const [filter, setFilter] = React.useState(params.get('filter') || '')
   const images = data.images.edges.map(({ node }) => ({
     ...node.childImageSharp,
     dir: node.dir,
@@ -71,7 +72,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
   const filteredImages = filter.length ?
     images.filter(img => img.dir.endsWith(filter)) : images
-
+console.log(filter, folders)
   return (
     <Layout>
       <div className='filterBar'>Filters: {folders.map(f => {
