@@ -1,3 +1,13 @@
+export const setQueryStringParameter = (name, value) => {
+  const params = new URLSearchParams(window.location.search);
+  params.set(name, value);
+  window.history.pushState(
+    {},
+    "",
+    decodeURIComponent(`${window.location.pathname}?${params}`)
+  );
+};
+
 export const getMonthName = (monthInStr) => {
   const monthNames = [
     "January",

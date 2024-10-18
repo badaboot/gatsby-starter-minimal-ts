@@ -1,56 +1,9 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import { IGatsbyImageData } from "gatsby-plugin-image";
 import "photoswipe/dist/photoswipe.css";
-import { Gallery as PhotoGallery, Item } from "react-photoswipe-gallery";
 import Layout from "../components/layout";
 import { getDateFromMMYYYY, getMonthName } from "../utils";
-
-const MyGallery = ({ images }) => {
-  return (
-    <PhotoGallery withCaption id="my-gallery">
-      <div>
-        {images.map((img) => {
-          const thumbUrl = img.thumb?.images?.fallback?.src;
-          const { width, height, images } = img.full;
-          const mainUrl = images.fallback.src;
-
-          return (
-            <Item<HTMLImageElement>
-              original={mainUrl}
-              width={width}
-              height={height}
-              key={img.name}
-              alt={img.name}
-              id={img.name}
-              caption={img.name}
-            >
-              {/* thumbnail */}
-              {({ ref, open }) => (
-                <img
-                  ref={ref}
-                  style={{ cursor: "pointer", marginLeft: 8 }}
-                  onClick={open}
-                  src={thumbUrl}
-                />
-              )}
-            </Item>
-          );
-        })}
-      </div>
-    </PhotoGallery>
-  );
-};
-interface ImageSharpEdge {
-  node: {
-    childImageSharp: {
-      thumb: IGatsbyImageData;
-      full: IGatsbyImageData;
-    };
-    dir;
-    modifiedTime;
-  };
-}
+import { MyGallery, ImageSharpEdge } from "../components/MyGallery";
 
 interface PageProps {
   data: {
@@ -60,8 +13,14 @@ interface PageProps {
   };
 }
 
+interface DirImageMap {
+  [key: string]: {
+    date: Date;
+    images: ImageSharpEdge[];
+  };
+}
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const dirImagesMap = {}; // 04-2022: {images: Images[], date: getDateFromMMYYYY(mmyyyy)}
+  const dirImagesMap: DirImageMap = {};
   data.images.edges.forEach(({ node }) => {
     const arr = node.dir.split("/");
     // eg. arr ends with ['12-2023', 'art']. Gets 'art'
@@ -82,13 +41,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
   return (
     <Layout>
+      <p>Click on an image to see detail.</p>
       {entries.map(([folder, obj]) => {
         const [monthStr, year] = folder.split("-");
-        const { date, images } = obj;
         return (
           <div key={folder}>
-            <h2>{`${getMonthName(monthStr)} ${year}`}</h2>
-            <MyGallery images={images} />
+            <h2 className="header">{`${getMonthName(monthStr)} ${year}`}</h2>
+            <MyGallery images={obj.images} />
           </div>
         );
       })}
