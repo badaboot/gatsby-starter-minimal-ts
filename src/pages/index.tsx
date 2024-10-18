@@ -1,19 +1,10 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import * as React from "react";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import "photoswipe/dist/photoswipe.css";
 import { Gallery as PhotoGallery, Item } from "react-photoswipe-gallery";
 import Layout from "../components/layout";
-
-function setQueryStringParameter(name, value) {
-  const params = new URLSearchParams(window.location.search);
-  params.set(name, value);
-  window.history.pushState(
-    {},
-    "",
-    decodeURIComponent(`${window.location.pathname}?${params}`)
-  );
-}
+import { getDateFromMMYYYY, getMonthName } from "../utils";
 
 const MyGallery = ({ images }) => {
   return (
@@ -70,41 +61,44 @@ interface PageProps {
 }
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
-  const isSSR = typeof window === "undefined";
-  const params = isSSR
-    ? new URLSearchParams("")
-    : new URLSearchParams(window.location.search);
-  const [filter, setFilter] = React.useState(
-    isSSR ? "" : params.get("filter") || ""
+  const dirImagesMap = {}; // 04-2022: {images: Images[], date: getDateFromMMYYYY(mmyyyy)}
+  data.images.edges.forEach(({ node }) => {
+    const arr = node.dir.split("/");
+    // eg. arr ends with ['12-2023', 'art']. Gets 'art'
+    const folder = arr[arr.length - 2];
+    if (dirImagesMap[folder] === undefined) {
+      dirImagesMap[folder] = { images: [], date: getDateFromMMYYYY(folder) };
+    }
+    dirImagesMap[folder].images.push({
+      ...node.childImageSharp,
+      dir: node.dir,
+      modifiedTime: node.modifiedTime,
+      name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
+    });
+  });
+  const entries = Object.entries(dirImagesMap).sort(
+    (a, b) => b[1].date - a[1].date
   );
-  const images = data.images.edges.map(({ node }) => ({
-    ...node.childImageSharp,
-    dir: node.dir,
-    modifiedTime: node.modifiedTime,
-    name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
-  }));
-  const folders = Array.from(
-    new Set(images.map((im) => im.dir.split("/").pop()))
-  );
-
-  const filteredImages = filter.length
-    ? images.filter((img) => img.dir.endsWith(filter))
-    : images;
 
   return (
     <Layout>
-      <p>
-        <Link to="/">Home</Link>
-        <Link to="/all">All</Link>
-      </p>
-      {/* <MyGallery images={filteredImages} /> */}
+      {entries.map(([folder, obj]) => {
+        const [monthStr, year] = folder.split("-");
+        const { date, images } = obj;
+        return (
+          <div key={folder}>
+            <h2>{`${getMonthName(monthStr)} ${year}`}</h2>
+            <MyGallery images={images} />
+          </div>
+        );
+      })}
     </Layout>
   );
 };
 
 export const pageQuery = graphql`
   query ImagesForGallery {
-    images: allFile(sort: { modifiedTime: DESC }) {
+    images: allFile {
       edges {
         node {
           dir
