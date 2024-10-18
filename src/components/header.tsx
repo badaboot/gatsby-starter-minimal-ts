@@ -1,27 +1,13 @@
-import * as React from 'react'
+import * as React from "react";
 
 interface HeaderProps {
-  siteTitle: string
+  siteTitle: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ siteTitle = '' }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        {siteTitle}
-      </h1>
-    </div>
+const Header: React.FC<HeaderProps> = ({ siteTitle = "" }) => (
+  <header>
+    <h1 style={{ marginBottom: "1.45rem" }}>{siteTitle}</h1>
   </header>
-)
+);
 
-export default Header
+export default Header;

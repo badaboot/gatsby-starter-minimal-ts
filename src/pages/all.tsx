@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import * as React from "react";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import "photoswipe/dist/photoswipe.css";
@@ -94,10 +94,36 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <p>
-        <Link to="/">Home</Link>
-        <Link to="/all">All</Link>
+        Click on an image to see detail. Click on a filter to filter images.
       </p>
-      {/* <MyGallery images={filteredImages} /> */}
+      <div className="filterBar">
+        Filters:{" "}
+        {folders.map((f) => {
+          return (
+            <span
+              className={f === filter ? "selected" : "filter"}
+              key={f}
+              onClick={() => {
+                setFilter(f);
+                setQueryStringParameter("filter", f);
+              }}
+            >
+              {f}
+            </span>
+          );
+        })}{" "}
+        <span
+          className="clear"
+          onClick={() => {
+            setFilter("");
+            // removes all queries
+            window.history.pushState(null, "", window.location.pathname);
+          }}
+        >
+          Clear
+        </span>
+      </div>
+      <MyGallery images={filteredImages} />
     </Layout>
   );
 };
