@@ -21,7 +21,6 @@ export const MyGallery = ({ images }) => {
           const thumbUrl = img.thumb?.images?.fallback?.src;
           const { width, height, images } = img.full;
           const mainUrl = images.fallback.src;
-
           return (
             <Item<HTMLImageElement>
               original={mainUrl}
@@ -30,7 +29,7 @@ export const MyGallery = ({ images }) => {
               key={img.name}
               alt={img.name}
               id={img.name}
-              caption={img.name}
+              caption={`${img.name} ${img.dir.split("/").at(-2)}`}
             >
               {/* thumbnail */}
               {({ ref, open }) => (
