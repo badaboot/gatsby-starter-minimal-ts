@@ -8,6 +8,19 @@ export const setQueryStringParameter = (name, value) => {
   );
 };
 
+export const sortByMMYYYY = (dates) => {
+  return dates.sort((a, b) => {
+    const [monthA, yearA] = a.split("-").map(Number);
+    const [monthB, yearB] = b.split("-").map(Number);
+
+    if (yearA !== yearB) {
+      return yearB - yearA;
+    } else {
+      return monthB - monthA;
+    }
+  });
+};
+
 export const getMonthName = (monthInStr) => {
   const monthNames = [
     "January",

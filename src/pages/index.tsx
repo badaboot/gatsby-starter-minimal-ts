@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
-import { getMonthName } from "../utils";
+import { getMonthName, sortByMMYYYY } from "../utils";
 
-export default function HomePage(props) {
+export default function HomePage({ data }) {
   const monthToCountMap = {};
-  props.pageResources.json.data.allFile.nodes.forEach((o) => {
+  data.allFile.nodes.forEach((o) => {
     const arr = o.dir.split("/");
     const _month = arr.at(-2);
     if (monthToCountMap[_month] == undefined) {
@@ -14,7 +14,7 @@ export default function HomePage(props) {
     monthToCountMap[_month] += 1;
   });
   // ordered by most recent
-  const uniqueMonths: string[] = Object.keys(monthToCountMap).reverse();
+  const uniqueMonths: string[] = sortByMMYYYY(Object.keys(monthToCountMap));
 
   return (
     <Layout>
