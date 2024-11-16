@@ -15,7 +15,7 @@ export interface ImageSharpEdge {
 
 export const MyGallery = ({ images }) => {
   return (
-    <PhotoGallery withCaption id="my-gallery">
+    <PhotoGallery options={{ loop: false }} withCaption id="my-gallery">
       <div>
         {images.map((img) => {
           const thumbUrl = img.thumb?.images?.fallback?.src;

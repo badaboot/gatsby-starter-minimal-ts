@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import { getMonthName } from "../utils";
 
 export default function HomePage(props) {
   const monthToCountMap = {};
@@ -12,17 +13,25 @@ export default function HomePage(props) {
     }
     monthToCountMap[_month] += 1;
   });
-  const uniqueMonths: string[] = Object.keys(monthToCountMap);
+  // ordered by most recent
+  const uniqueMonths: string[] = Object.keys(monthToCountMap).reverse();
+
   return (
     <Layout>
       <ul>
-        {uniqueMonths.map((month) => (
-          <li key={month}>
-            <Link
-              to={`/comics/${month}`}
-            >{`${month}: +${monthToCountMap[month]}`}</Link>
-          </li>
-        ))}
+        {uniqueMonths.map((month) => {
+          const [monthStr, year] = month.split("-");
+
+          return (
+            <li key={month}>
+              <Link to={`/comics/${month}`}>
+                <h2 className="header">{`${getMonthName(monthStr)} ${year}: +${
+                  monthToCountMap[month]
+                }`}</h2>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </Layout>
   );
@@ -32,9 +41,7 @@ export const pageQuery = graphql`
   {
     allFile {
       nodes {
-        extension
         dir
-        modifiedTime
       }
     }
   }
