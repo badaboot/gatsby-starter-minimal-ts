@@ -235,12 +235,14 @@ body {
 }
 img {
   border-style: none;
-  max-width: 600px;
-  margin: 0 auto 1em auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0;
 }
 .post img {
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1em auto;
   display: block;
 }
 h1 {
