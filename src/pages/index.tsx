@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import { getMonthName, sortByMMYYYY } from "../utils";
+import Header from "../components/header";
 
 export default function HomePage({ data }) {
   const monthToCountMap = {};
@@ -18,20 +19,23 @@ export default function HomePage({ data }) {
 
   return (
     <Layout>
+      <Header siteTitle="Anny's comics"></Header>
       <ul>
-        {uniqueMonths.map((month) => {
-          const [monthStr, year] = month.split("-");
+        {uniqueMonths
+          .filter((month) => month.includes("-"))
+          .map((month) => {
+            const [monthStr, year] = month.split("-");
 
-          return (
-            <li key={month}>
-              <Link to={`/comics/${month}`}>
-                <h2 className="header">{`${getMonthName(monthStr)} ${year}: +${
-                  monthToCountMap[month]
-                }`}</h2>
-              </Link>
-            </li>
-          );
-        })}
+            return (
+              <li key={month}>
+                <Link to={`/comics/${month}`}>
+                  <h2 className="header">{`${getMonthName(
+                    monthStr
+                  )} ${year}: +${monthToCountMap[month]}`}</h2>
+                </Link>
+              </li>
+            );
+          })}
       </ul>
     </Layout>
   );

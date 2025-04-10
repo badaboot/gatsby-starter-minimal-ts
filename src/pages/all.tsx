@@ -3,6 +3,7 @@ import * as React from "react";
 import { MyGallery, ImageSharpEdge } from "../components/MyGallery";
 import Layout from "../components/layout";
 import { FilterBar } from "../FilterBar";
+import Header from "../components/header";
 
 interface PageProps {
   data: {
@@ -36,6 +37,8 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
   return (
     <Layout>
+      <Header siteTitle="Anny's comics"></Header>
+
       <p>
         Click on an image to see detail. Click on a filter to filter images.
       </p>
