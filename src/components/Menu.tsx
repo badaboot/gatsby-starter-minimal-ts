@@ -8,8 +8,11 @@ export const Menu = () => {
         Home
       </Link>
       <Link to="/all" activeStyle={{ textDecoration: "none" }}>
-        All
+        Comics
       </Link>
+      {/* <Link to="/blog" activeStyle={{ textDecoration: "none" }}>
+        Blog
+      </Link> */}
     </p>
   );
 };

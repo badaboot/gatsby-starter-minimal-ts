@@ -3,6 +3,7 @@ import * as React from "react";
 import { MyGallery, ImageSharpEdge } from "../components/MyGallery";
 import Layout from "../components/layout";
 import { FilterBar } from "../FilterBar";
+import Header from "../components/header";
 
 interface PageProps {
   data: {
@@ -20,12 +21,14 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const [filter, setFilter] = React.useState(
     isSSR ? "" : params.get("filter") || ""
   );
-  const images = data.images.edges.map(({ node }) => ({
-    ...node.childImageSharp,
-    dir: node.dir,
-    modifiedTime: node.modifiedTime,
-    name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
-  }));
+  const images = data.images.edges
+    .filter(({ node }) => node.childImageSharp)
+    .map(({ node }) => ({
+      ...node.childImageSharp,
+      dir: node.dir,
+      modifiedTime: node.modifiedTime,
+      name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
+    }));
   const folders = Array.from(
     new Set(images.map((im) => im.dir.split("/").pop()))
   ).sort();
@@ -36,6 +39,8 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
   return (
     <Layout>
+      <Header siteTitle="Anny's comics"></Header>
+
       <p>
         Click on an image to see detail. Click on a filter to filter images.
       </p>
