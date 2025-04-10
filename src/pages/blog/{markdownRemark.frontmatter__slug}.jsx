@@ -10,7 +10,7 @@ export default function BlogPostTemplate({ data }) {
     <Layout className="post">
       <Header textAlign="center" siteTitle={frontmatter.title} />
       <h3 style={{ textAlign: "center" }}>{frontmatter.date}</h3>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 }

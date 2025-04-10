@@ -29,9 +29,9 @@ export default function HomePage({ data }) {
             return (
               <li key={month}>
                 <Link to={`/comics/${month}`}>
-                  <h2 className="header">{`${getMonthName(
+                  <h3 className="header">{`${getMonthName(
                     monthStr
-                  )} ${year}: +${monthToCountMap[month]}`}</h2>
+                  )} ${year}: +${monthToCountMap[month]}`}</h3>
                 </Link>
               </li>
             );

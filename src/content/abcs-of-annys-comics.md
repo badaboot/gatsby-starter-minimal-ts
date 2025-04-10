@@ -26,7 +26,7 @@ This alphabet ends with U, since you are the audience of my art :)
 
 **Inspiration**: Ideas come to me easily. What’s harder is making time to draw.
 
-**JK**: I see myself as the **joker**,the one pointing out what others are too busy to notice/too polite to say.
+**JK**: I see myself as the **joker**, the one pointing out what others are too busy to notice/too polite to say.
 
 **Laughter**: We can use more of these.
 
