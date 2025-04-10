@@ -235,10 +235,12 @@ body {
 }
 img {
   border-style: none;
-  width: 100%;
   max-width: 600px;
   margin: 0 auto 1em auto;
   padding: 0;
+}
+.post img {
+  width: 100%;
   display: block;
 }
 h1 {
