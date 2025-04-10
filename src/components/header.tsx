@@ -2,7 +2,7 @@ import * as React from "react";
 
 interface HeaderProps {
   siteTitle: string;
-  textAlign: "left" | "right" | "center";
+  textAlign?: "left" | "right" | "center";
 }
 
 const Header: React.FC<HeaderProps> = ({
