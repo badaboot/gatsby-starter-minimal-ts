@@ -10,9 +10,12 @@ export const Menu = () => {
       <Link to="/all" activeStyle={{ textDecoration: "none" }}>
         Comics
       </Link>
-      {/* <Link to="/blog" activeStyle={{ textDecoration: "none" }}>
+      <Link to="/blog" activeStyle={{ textDecoration: "none" }}>
         Blog
-      </Link> */}
+      </Link>
+      <Link to="/about" activeStyle={{ textDecoration: "none" }}>
+        About
+      </Link>
     </p>
   );
 };

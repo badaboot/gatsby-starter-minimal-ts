@@ -5,8 +5,7 @@ title: "ABCs of Anny’s comics"
 tags: ["animals", "Chicago", "zoos"]
 ---
 
-Here I distill my comics creation process into an alphabetical format.
-This alphabet ends with U, since you are the audience of my art :)
+Here I distill [my comics]('/all') creation process into an alphabetical summary. This summary ends with U, since you are the audience of my art :)
 
 **Autobiographical**: Some of my comics are based on my life.
 

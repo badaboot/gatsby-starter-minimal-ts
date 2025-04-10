@@ -10,15 +10,7 @@ const Header: React.FC<HeaderProps> = ({
   textAlign = "left",
 }) => (
   <header>
-    <h1
-      style={{
-        textAlign: textAlign,
-        marginBottom: "1.45rem",
-        marginTop: "0.5rem",
-      }}
-    >
-      {siteTitle}
-    </h1>
+    <h1>{siteTitle}</h1>
   </header>
 );
 

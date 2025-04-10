@@ -7,10 +7,12 @@ export default function BlogPostTemplate({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout className="post">
-      <Header textAlign="center" siteTitle={frontmatter.title} />
-      <h3 style={{ textAlign: "center" }}>{frontmatter.date}</h3>
-      <div className="post" dangerouslySetInnerHTML={{ __html: html }} />
+    <Layout>
+      <div className="post">
+        <Header textAlign="center" siteTitle={frontmatter.title} />
+        <h4 style={{ textAlign: "center" }}>{frontmatter.date}</h4>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </Layout>
   );
 }

@@ -5,11 +5,11 @@ title: "Fun things to do near Vegas"
 tags: ["animals", "Chicago", "zoos"]
 ---
 
-My husband and I moved to the greater Vegas area and found cool places to share. They're grouped by city name.
+My husband and I moved to the greater Vegas area from the Bay area, and found cool places to share. They are grouped by city name.
 
 ### Vegas off of the strip
 
-**University of Las Vegas**: Has a [free-admissions art gallery](https://www.unlv.edu/unit/marjorie-barrick-museum) featuring local artists.
+**University of Las Vegas**: Has a free-admissions [art gallery](https://www.unlv.edu/unit/marjorie-barrick-museum) featuring local artists.
 <img src='/venus.png' alt='Ailene Pasco: Venus at rest 2024' />
 <span>Ailene Pasco: Venus at rest 2024</span>
 
@@ -23,8 +23,8 @@ My husband and I moved to the greater Vegas area and found cool places to share.
 - Is in the same building as the largest **Bass Pro** shop in the US. The shop has a large taxidermy collection of lions, bears, and even a giraffe. It has a large gun collection too
 - Is close to the [Lion Ranch Habitat](https://lionhabitatranch.org), which has lions, ostriches, emus, and other animals
 
-<img src='/lions.png' alt='Lion brothers at Lion Habitat Ranch, taken 2024' />
-<span>Lion brothers at Lion Habitat Ranch, taken 2024</span>
+<img src='/lions.png' alt='Lion brothers at the Lion Ranch, taken 2024' />
+<span>Lion brothers at the Lion Ranch, taken 2024</span>
 
 ### Boulder City
 
@@ -48,7 +48,7 @@ This town borders Vegas. It's quieter and you'll need a car.
 - Nearby is [Mama Pam](https://mamapamlv.com/), a reliably good Thai restaurant
 
 <img src='/ethel-m-chocolate.png' alt='A box of Ethel M. chocolates showing the cactus garden' />
-<span>A box of Ethel M. chocolates showing the cactus garden.</span>
+<span>A box of Ethel M. chocolates showing the cactus garden</span>
 
 [**Bird preserve**](https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/337/): This short and flat route is surrounded by birds. We saw ducks and hawks flying overhead.
 

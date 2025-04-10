@@ -5,43 +5,60 @@ title: "Creating 'Chasing Sunrise'"
 tags: ["animals", "Chicago", "zoos"]
 ---
 
-This game is published! You can check it out for free here and leave feedback in the comments.
-This is the third of three interactive fiction stories; they’re all standalones and available on itch.io. Play them …
+This game is published! You can [check it out here](https://badaboot.itch.io/chasing-sunrise).
 
-<img src='/unicorn_start.jpg' alt='unicorn plushie on start screen' />
-What is the game about?
-This horror-comedy is "Get out" meets "Squid Game", with elements of selfishness vs sacrifice. I’m also inspired by how hard it is to form human connections in the age of technology; every new technology seems to make us more isolated eg. chat to a chatbot instead of a human.
-You, as the player, can decide between the harder truth-finding route or the easy status-quo route, which might end up hard. You’ll need to play to find out :)
+This is the third of three interactive fiction stories; they’re standalones and available on [my itch.io page](https://badaboot.itch.io/).
+
+<a href='https://badaboot.itch.io/chasing-sunrise'><img src='/unicorn_start.jpg' alt='unicorn plushie on start screen' /></a>
+
+### What is the game about?
+
+This horror-comedy is "[**Get out**](https://en.wikipedia.org/wiki/Get_Out)" meets "[**Squid Game**](https://en.wikipedia.org/wiki/Squid_Game)", with elements of selfishness vs sacrifice. I’m also inspired by the frailty of human connections in our rapidly changing world; eg. some of us engage more with chatbots than with other people.
+
+You as the player, can choose between truth-finding or the status-quo. There's a price to pay either way :)
+
+### What is my game dev process?
+
+I've refined this process thrice over the three stories:
+
+1. Hammer out idea on paper:
+   - The page count helps me gauge how fleshed-out an idea is
+   - Ideally the idea is **fleshed out** enough and I'm still **passionate enough** to make it
+2. Type out idea in Google docs
+   - Type out a blurb, character + settings, and the actual story (plot + words)
+   - Ensure all the branches/endings are sensible. If there is no branching than this can be a regular story/comics
+   - Check the story for length: ideally the story is not too long, but long enough to be worthwhile
+3. Add the story to [Twine](https://twinery.org/)
+
+   - I use the [Harlowe](https://twinery.org/cookbook/markup/harlowe/harlowe_markup.html) story format as it has the most minimal UI
+   - I reuse CSS from previous projects for styling
+   - At this point I get my husband to play-test it, to improve the story
+
+<img src='/script.png' alt='a printed out script with my doodles on it' />
+     <span>I print out the script and doodle on it with a pen to prototype different camera angles.</span>
+
+4. Draw and add illustrations
+
+   - The good news is **I draw fast**, since drawing is my oldest hobby
+   - The bad news is I need to **psych myself up** to draw, since I only draw occasionally now. I also plan the shots in the picture above
+   - After adding the images I get my hubby to play-test the story again. He may suggest adding more images/changing images, and which sounds to add
+
+5. Add sounds
+   - I make a list of sounds and search for them on [Pixabay](https://pixabay.com/)
+   - I save the attribution for the sounds used and add them to the credits page
+   - After adding sounds I get my husband to play-test again before publishing the game on itch.io. I usually submit the game to a few game jams to get more feedback
+
+### A note on my drawing process
 
 <img src='/drawings.png' alt='my Sharpie drawings on white paper' />
-A page of my illustrations for the game; I wrote and illustrated this game myself. Game dev is NOT easy. There's a lot of time to refine the idea and produce assets.
+<span>A page of my illustrations for the game; I wrote and illustrated this game myself</span>
 
-What is my game dev process?
-This is my third interactive fiction game. I’ve applied the same process three times, with some tweaking:
-Hammer out idea on notebook:
-I use pen and paper, and use page count to gauge how passionate I am about an idea/how fleshed-out the idea is
-Type out idea in Google docs
-Type out a blurb, character bank, and the actual story
-Check the story for length: I prefer to err on the side of being too short than too long
-Ensure all the branches/endings are sensible
-Add the story to Twine
-I use the Harlowe story format as it has the most minimal UI. It’s easy to get started, and I copy-paste CSS from previous projects for styling
+- I draw on **looseleaf paper** to trace previous pages. The pages might be printed on one side, since I’m into reuse-reduce-recycle
+- I draw by hand using a **pencil and Sharpie**; the pencil is erased digitally, and the Sharpie pen really smells
+- I use black and white because it’s graphic and simple. I’m a minimalist at heart and took art lessons in China, where we tried to emulate the black and white watercolors. I use Sharpies for a faster-paced world, but the minimalist principle still applies
 
-Draw illustrations
-Need to psych myself up
-<img src='/script.png' alt='a printed out script with my doodles on it' />
-I print out the script and doodle on it with a pen to prototype different camera angles. My simplified drawing style can look comedic but the theme is existential horror, so I can swing between funny and tragic, and it’s a delicate balance because one needs the funny to counteract the tragic, to prevent the story from being too depressing
-I draw by hand using a pencil and Sharpie; the Sharpie pen really smells
-I use black and white because it’s graphic and simple. I’m a minimalist at heart and took art lessons in China, where we used paint brushes to try to emulate the black and white watercolors from Chinese artists of old. Those artists could paint birds with a few brushstrokes. My medium is quite different; I use Sharpies for a faster-paced world, but I hope one day I can be as expressive as they were one day
+### Fun fact
 
-A page of illustrations. Notice I draw on looseleaf paper since I can trace on previous pages. These are one-sided on already printed paper, since I’m a reuse-reduce-recycle kind of person.
+The most time-intensive part is NOT drawing or ideation, but the **word-smithing** eg. editing the story to have the minimal word count while maximizing impact. The longer the story the longer the editing.
 
-Add sounds
-I make a list of sounds and search for them on pixabay
-I make sure to save the attribution for the sounds I use, and add them to the credits page
-I edit the photos in Google Photos, where my photos are backed up. There are definitely better editing tools out there
-Add sounds
-
-It’s good to have a process to iterate over.
-Need to have lots of polish eg. wordsmithing.
-Thanks to my husband for encouraging me to make games and also playtesting them, and giving me actionable feedback :)
+You can check out ['Chasing Sunrise' here](https://badaboot.itch.io/chasing-sunrise).
