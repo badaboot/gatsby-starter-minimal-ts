@@ -55,4 +55,4 @@ still compulsively write and journal.
 
 **Throw out**: I throw out most of my old notebooks after reading them, and most of the ideas too since they don’t fit the constrained space and medium.
 
-**U**: I hope you like the comics and share'em :)
+**U**: I hope you like [my comics]('/all') and share'em :)
