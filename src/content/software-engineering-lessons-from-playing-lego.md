@@ -12,15 +12,17 @@ My husband and I put together a [1700+ piece lego](https://www.lego.com/en-us/pr
 
 How did we put it together so quickly?
 
-#### Practice
+### Practice
 
-This specific Lego set has lots of symmetrical parts, hence the instructions are similar. By building quickly we quickly accumulated practice building the similar parts over and over again.
+The above Lego sets had lots of symmetrical parts, hence the instructions are similar. By building quickly we quickly accumulated practice building the similar parts over and over again.
 
-#### Specialization
+### Specialization
+
+<img src='/sorted_lego.jpg' alt='sorted legos on paper' />
 
 I group similar pieces into piles while my husband tackles the building. This organizational step slows us down at the beginning but we quickly make up the time. It’s much faster than finding pieces in an unsorted pile.
 
-#### Teamwork
+### Teamwork
 
 After we put together 7 out of 20 sections we took a break before blazing through the rest of the sections. Each of us took a break while the other person pushed through. Also when the parts don’t fit we troubleshoot together.
 
