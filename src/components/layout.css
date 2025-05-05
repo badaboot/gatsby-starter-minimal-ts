@@ -254,6 +254,7 @@ img {
   display: block;
 }
 
+video + span,
 img + span {
   display: flex;
   justify-content: center;

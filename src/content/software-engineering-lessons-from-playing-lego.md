@@ -5,10 +5,12 @@ title: "Lessons from playing LEGO"
 tags: ["animals", "Chicago", "zoos"]
 ---
 
-<img src='/legos.png' alt='Lego cat and piranha plant' />
-<span>Lego cat and piranha plant</span>
+<video controls width="400" style='display: block; margin: 0 auto'>
+  <source src="/movies/pacmanLego.mp4" type="video/mp4" />
+</video>
+<span>Pacman arcade game made from Legos</span>
 
-My husband and I put together a [1700+ piece lego](https://www.lego.com/en-us/product/tuxedo-cat-21349) (the tuxedo cat) within three hours on a Sunday afternoon. The number of pieces looked daunting; it’s so high that the toy was rated 18+.
+My husband and I put together a [2651 piece lego](https://www.lego.com/en-us/product/pac-man-arcade-10323) (PAC-MAN Arcade) within three days part-time. The number of pieces looked daunting; it’s so high that the box was rated 18+.
 
 How did we put it together so quickly?
 
@@ -18,7 +20,8 @@ The above Lego sets had lots of symmetrical parts, hence the instructions are si
 
 ### Specialization
 
-<img src='/sorted_lego.jpg' alt='sorted legos on paper' />
+<img src='/img/sorted_lego.png' alt='sorted legos on paper' />
+<span>Sorted Lego pieces</span>
 
 I group similar pieces into piles while my husband tackles the building. This organizational step slows us down at the beginning but we quickly make up the time. It’s much faster than finding pieces in an unsorted pile.
 
