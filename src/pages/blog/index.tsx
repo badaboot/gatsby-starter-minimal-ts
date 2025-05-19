@@ -12,9 +12,8 @@ const IndexPage = ({
   const Posts = edges
     .filter((edge) => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map((edge) => (
-      <li>
-        {" "}
-        <PostLink key={edge.node.id} post={edge.node} />
+      <li key={edge.node.id}>
+        <PostLink post={edge.node} />
       </li>
     ));
 
