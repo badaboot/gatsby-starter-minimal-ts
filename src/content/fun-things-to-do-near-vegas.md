@@ -2,7 +2,7 @@
 slug: "/fun-things-to-do-near-vegas"
 date: "2025-04-06"
 title: "Fun things to do near Vegas"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["travel"]
 ---
 
 My husband and I moved to the greater Vegas area from the Bay area, and found cool places to share. They are grouped by city name.

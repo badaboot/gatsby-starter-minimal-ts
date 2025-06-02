@@ -2,7 +2,7 @@
 slug: "/creating-chasing-sunrise"
 date: "2025-03-25"
 title: "Creating 'Chasing Sunrise'"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["game", "art"]
 ---
 
 This game is published! You can [check it out here](https://badaboot.itch.io/chasing-sunrise).

@@ -2,7 +2,7 @@
 slug: "/best-solution-is-low-tech"
 date: "2025-03-25"
 title: "When the best solution is low-tech"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["technology"]
 ---
 
 <img src='/cat-calligraphy.png' alt='my cat looking at my Chinese letters on a scroll' />

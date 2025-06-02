@@ -2,7 +2,7 @@
 slug: "/learning-chinese-with-an-ai-bot"
 date: "2025-03-09"
 title: "Learning Chinese with an AI bot"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["technology"]
 ---
 
 Mandarin was my first language but I’m rusty at it since I left China as a child. I want to brush up on the language before I visit China.

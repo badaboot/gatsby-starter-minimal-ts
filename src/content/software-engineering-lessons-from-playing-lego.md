@@ -2,7 +2,7 @@
 slug: "/lessons-from-playing-lego"
 date: "2025-03-24"
 title: "Lessons from playing LEGO"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["technology"]
 ---
 
 <video controls width="400" style='display: block; margin: 0 auto'>

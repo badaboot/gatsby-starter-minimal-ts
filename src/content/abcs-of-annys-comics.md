@@ -2,7 +2,7 @@
 slug: "/abcs-of-annys-comics"
 date: "2025-03-13"
 title: "ABCs of Anny’s comics"
-tags: ["animals", "Chicago", "zoos"]
+tags: ["art"]
 ---
 
 Here I distill [my comics]('/all') creation process into an alphabetical summary. This summary ends with U, since you are the audience of my art :)
