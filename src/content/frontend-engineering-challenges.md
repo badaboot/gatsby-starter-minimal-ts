@@ -1,11 +1,11 @@
 ---
 slug: "/frontend-engineering-challenges"
 date: "2025-06-02"
-title: "Frontend engineering is hard"
+title: "Why frontend engineering is hard"
 tags: ["technology"]
 ---
 
-After 8 years I've learned it's more than pixel-pushing.
+After 8 years I know it's more than pixel-pushing.
 
 1. Everyone has an opinion on the UI including the users, colleagues, and their grandmas. Only the database people know what's [optimistic vs pessimistic locking](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking), but the general population have an opinion on a button size and color, plus font style and size. People will disagree and grumble about the decision.
 
