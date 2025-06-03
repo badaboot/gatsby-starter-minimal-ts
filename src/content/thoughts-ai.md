@@ -1,7 +1,7 @@
 ---
 slug: "/thoughts-ai"
 date: "2025-06-02"
-title: "My thoughts on Generative AI tools"
+title: "Thoughts on Generative AI tools"
 tags: ["technology"]
 ---
 
