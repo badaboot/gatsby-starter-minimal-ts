@@ -7,7 +7,7 @@ tags: ["technology"]
 
 After 8 years I know it's more than pixel-pushing.
 
-1. **Everyone has an opinion** on the UI including the users, colleagues, and their grandmas. Only the database people know what's [optimistic vs pessimistic locking](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking), but the general population have an opinion on a button size and color, plus font style and size. People will disagree and grumble about the decision.
+1. **Everyone has an opinion** on the UI including your users, colleagues, and their grandmas. Only the database people know what's [optimistic vs pessimistic locking](https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking), but the general population have an opinion on a button size and color, plus font style and size. People will disagree and grumble about the decision.
 
 2. A new framework or library comes out every month in addition to AI advancements. AI models can run in-browser with **web-llm** and **web GPU**, with heavy performance implications. It's more than styling; the browser can crash, preventing the user from doing any work :(
 

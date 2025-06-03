@@ -1,5 +1,5 @@
 ---
-slug: "/thoughts-ai"
+slug: "/thoughts-ai-image"
 date: "2025-06-02"
 title: "Thoughts on AI image generation"
 tags: ["technology"]
@@ -28,11 +28,11 @@ and here's the generated image with a twist.
 <img src='../../img/pipe.png' alt="Rene Magritte's pipe image with last word being AI" />
 <span>An image I generated with Gemini 2.5 Flash</span>
 
-Perhaps editing the original would've been better, as I only meant to change the caption.
+Perhaps **editing the original** would've been better, as I only wanted to change the text.
 
-[The original painting](https://www.dailyartmagazine.com/painting-week-rene-magritte-treachery-images/)'s caption said: "This is not a pipe". It's a representation of a pipe.
+[The original painting](https://www.dailyartmagazine.com/painting-week-rene-magritte-treachery-images/)'s text read: "This is not a pipe". It's a representation of a pipe.
 
-I changed it to say: "This is not AI." It's a representation of AI-generated images.
+I changed it to say: "This is not AI." It's a representation of an AI-generated image.
 
 ### Prediction
 
@@ -44,4 +44,4 @@ In AI's case the big providers eg. Google will drive other providers out of busi
 
 One way is to use open source models (they're on [Huggingface](https://huggingface.co/)), but it's hard to compete against better-funded models.
 
-Another option is to continue to develop core skills (eg. coding/drawing/editing/animation) and avoid being dependent on AI tools. One can still use them to augment existing skills, but they should not be a crutch.
+Another option is to continue to develop core skills (eg. coding/drawing/writing/editing/animation) and avoid being dependent on AI tools. One can still use them to augment existing skills, but they should not be a crutch.
