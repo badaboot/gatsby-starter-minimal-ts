@@ -9,7 +9,7 @@ tags: ["technology"]
 
 Whenever I look at generated images I want to edit them, since they're usually a little off.
 
-For example these are cats generated using the [Black Forest's Schnell model](https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell) with the prompt: "Angry cat in Japanese style."
+For example these cats were generated using the [Black Forest's Schnell model](https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell) with the prompt: "Angry cat in Japanese style."
 
 <img src='../../img/cat_1.webp' alt="cat with thin lips" />
 <span>The upper lips are too thin, also the toes are off by one.</span>
@@ -40,7 +40,7 @@ AI tools are affordable now; their prices will rise after a **consolidation**. S
 
 In AI's case the big providers eg. Google will drive other providers out of business before raising prices.
 
-### How to prevent vendor lock-in?
+### How to avoid vendor lock-in?
 
 One way is to use open source models (they're on [Huggingface](https://huggingface.co/)), but it's hard to compete against better-funded models.
 
