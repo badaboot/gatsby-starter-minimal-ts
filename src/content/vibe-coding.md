@@ -40,9 +40,9 @@ Hmm, there's a first time for everything.
 
 I've written SQL `CREATE` statements before and never prompted for them. Here's what I did:
 
-1. write the SQL `CREATE` statements on a Google doc
+1. write the SQL `CREATE` statements and test it locally on Postgres
 2. write a prompt to describe the statement
-3. put the prompt in and verify the resulting SQL was correct
+3. put the prompt into lovable and verify the resulting SQL was correct
 
 A non-technical person can prompt to create the `CREATE` statements and get them right; this is not the hard part.
 
