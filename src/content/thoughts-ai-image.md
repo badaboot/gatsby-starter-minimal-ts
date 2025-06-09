@@ -7,7 +7,7 @@ tags: ["technology"]
 
 ### Text to Image
 
-Whenever I look at generated images I want to edit them, since they're usually a little off.
+Whenever I look at generated images I want to edit them, especially those that are a little 'off'.
 
 For example these cats were generated using the [Black Forest's Schnell model](https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell) with the prompt: "Angry cat in Japanese style."
 
@@ -15,7 +15,7 @@ For example these cats were generated using the [Black Forest's Schnell model](h
 <span>The upper lips are too thin, also the toes are off by one.</span>
 
 <img src='../../img/cat_2.webp' alt="cat with extra paw" />
-<span>This cat has an extra, human-like hand, and its furless foot looks odd.</span>
+<span>This cat has an extra human-like hand, and its furless foot looks odd.</span>
 
 ### With Reference image
 
@@ -42,6 +42,6 @@ In AI's case the big providers eg. Google will drive other providers out of busi
 
 ### How to avoid vendor lock-in?
 
-One way is to use open source models (they're on [Huggingface](https://huggingface.co/)), but it's hard to compete against better-funded models.
+One way is to use open source models (they're on [Huggingface](https://huggingface.co/)), but it's hard for them to compete against better-funded models.
 
 Another option is to continue to develop core skills (eg. coding/drawing/writing/editing/animation) and avoid being dependent on AI tools. One can still use them to augment existing skills, but they should not be a crutch.
