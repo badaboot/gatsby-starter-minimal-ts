@@ -19,7 +19,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
     ? new URLSearchParams("")
     : new URLSearchParams(window.location.search);
   const [filter, setFilter] = React.useState(
-    isSSR ? "" : params.get("filter") || ""
+    isSSR ? "" : params.get("filter") || "",
   );
   const images = data.images.edges
     .filter(({ node }) => node.childImageSharp)
@@ -30,9 +30,9 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
     }));
   const folders = Array.from(
-    new Set(images.map((im) => im.dir.split("/").pop()))
+    new Set(images.map((im) => im.dir.split("/").pop())),
   ).sort();
-
+  console.log(images);
   const filteredImages = filter.length
     ? images.filter((img) => img.dir.endsWith(filter))
     : images;
@@ -52,7 +52,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
 export const pageQuery = graphql`
   query ImagesForGallery {
-    images: allFile(sort: { modifiedTime: DESC }) {
+    images: allFile(
+      sort: { modifiedTime: DESC }
+      filter: { relativeDirectory: { regex: "/^((?!paper-cutting).)*$/" } }
+    ) {
       edges {
         node {
           dir

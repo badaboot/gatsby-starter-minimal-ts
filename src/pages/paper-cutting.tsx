@@ -1,16 +1,77 @@
+import { graphql } from "gatsby";
 import * as React from "react";
-import { HeadFC, PageProps } from "gatsby";
+import { MyGallery, ImageSharpEdge } from "../components/MyGallery";
 import Layout from "../components/layout";
+import { FilterBar } from "../FilterBar";
+import Header from "../components/header";
 
-const PaperCuttingPage: React.FC<PageProps> = () => {
+interface PageProps {
+  data: {
+    images: {
+      edges: ImageSharpEdge[];
+    };
+  };
+}
+
+const IndexPage: React.FC<PageProps> = ({ data }) => {
+  const isSSR = typeof window === "undefined";
+  const params = isSSR
+    ? new URLSearchParams("")
+    : new URLSearchParams(window.location.search);
+  const [filter, setFilter] = React.useState(
+    isSSR ? "" : params.get("filter") || "",
+  );
+  const images = data.images.edges
+    .filter(({ node }) => node.childImageSharp)
+    .map(({ node }) => ({
+      ...node.childImageSharp,
+      dir: node.dir,
+      modifiedTime: node.modifiedTime,
+      name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
+    }));
+  const folders = Array.from(
+    new Set(images.map((im) => im.dir.split("/").pop())),
+  ).sort();
+
+  const filteredImages = filter.length
+    ? images.filter((img) => img.dir.endsWith(filter))
+    : images;
+
   return (
     <Layout>
-      <h1>Paper Cutting</h1>
-      <p>Happy cutting!</p>
+      <Header siteTitle="Paper cuttings"></Header>
+
+      <p>
+        Click on an image to see detail. Click on a filter to filter images.
+      </p>
+      <FilterBar folders={folders} filter={filter} setFilter={setFilter} />
+      <MyGallery images={filteredImages} />
     </Layout>
   );
 };
 
-export default PaperCuttingPage;
+export const pageQuery = graphql`
+  query ImagesForGallery {
+    images: allFile(
+      sort: { modifiedTime: DESC }
+      filter: { relativeDirectory: { regex: "/paper-cutting/" } }
+    ) {
+      edges {
+        node {
+          dir
+          modifiedTime
+          childImageSharp {
+            full: gatsbyImageData(layout: FIXED, width: 700)
+            thumb: gatsbyImageData(
+              width: 150
+              height: 150
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    }
+  }
+`;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+export default IndexPage;
