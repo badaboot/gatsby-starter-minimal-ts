@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const folders = Array.from(
     new Set(images.map((im) => im.dir.split("/").pop())),
   ).sort();
-
+  console.log(images);
   const filteredImages = filter.length
     ? images.filter((img) => img.dir.endsWith(filter))
     : images;
@@ -61,7 +61,11 @@ export const pageQuery = graphql`
           dir
           modifiedTime
           childImageSharp {
-            full: gatsbyImageData(layout: FIXED, width: 700)
+            full: gatsbyImageData(
+              layout: CONSTRAINED
+              width: 700
+              transformOptions: { fit: CONTAIN }
+            )
             thumb: gatsbyImageData(
               width: 150
               height: 150
