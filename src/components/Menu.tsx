@@ -13,6 +13,9 @@ export const Menu = () => {
       <Link to="/blog" activeStyle={{ textDecoration: "none" }}>
         Blog
       </Link>
+      <Link to="/paper-cutting" activeStyle={{ textDecoration: "none" }}>
+        Paper Cuttings
+      </Link>
       <Link to="/about" activeStyle={{ textDecoration: "none" }}>
         About
       </Link>
