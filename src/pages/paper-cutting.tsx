@@ -40,6 +40,9 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       ...node.childImageSharp,
       dir: node.dir,
       name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
+      created: dateMap.get(
+        node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
+      ),
     }))
     .sort((a, b) => {
       const dateA = dateMap.get(a.name) ?? "0000-00-00";
@@ -61,7 +64,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         Click on an image to see detail. Click on a filter to filter images.
       </p>
       <FilterBar folders={folders} filter={filter} setFilter={setFilter} />
-      <MyGallery images={filteredImages} />
+      <MyGallery
+        images={filteredImages}
+        captionFn={(img) => `${img.name} ${img.created}`}
+      />
     </Layout>
   );
 };

@@ -13,7 +13,7 @@ export interface ImageSharpEdge {
   };
 }
 
-export const MyGallery = ({ images }) => {
+export const MyGallery = ({ images, captionFn }) => {
   return (
     <PhotoGallery options={{ loop: false }} withCaption id="my-gallery">
       <div>
@@ -30,7 +30,7 @@ export const MyGallery = ({ images }) => {
               key={img.name}
               alt={img.name}
               id={`${folderName}/${img.name}`}
-              caption={`${img.name} ${folderName}`}
+              caption={captionFn(img)}
             >
               {/* thumbnail */}
               {({ ref, open }) => (

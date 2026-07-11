@@ -45,7 +45,13 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
         Click on an image to see detail. Click on a filter to filter images.
       </p>
       <FilterBar folders={folders} filter={filter} setFilter={setFilter} />
-      <MyGallery images={filteredImages} />
+      <MyGallery
+        images={filteredImages}
+        captionFn={(img) => {
+          const folderName = img.dir.split("/").at(-2);
+          return `${img.name} ${folderName}`;
+        }}
+      />
     </Layout>
   );
 };
