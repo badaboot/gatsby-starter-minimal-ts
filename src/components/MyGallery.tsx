@@ -9,7 +9,7 @@ export interface ImageSharpEdge {
       full: IGatsbyImageData;
     };
     dir;
-    modifiedTime;
+    modifiedTime?: string;
   };
 }
 
