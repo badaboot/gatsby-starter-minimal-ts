@@ -1,31 +1,115 @@
 [
-  { "file": "butterfly.jpg", "created": "2026-07-06" },
-  { "file": "original_4.jpg", "created": "2026-07-06" },
-  { "file": "turtle.jpg", "created": "2026-07-06" },
-  { "file": "gingerbread_man.jpg", "created": "2026-07-06" },
-  { "file": "flowers.jpg", "created": "2026-07-06" },
-  { "file": "gourd.jpg", "created": "2026-07-06" },
-  { "file": "pineapple.jpg", "created": "2026-07-06" },
-  { "file": "bride.jpg", "created": "2026-07-06" },
-  { "file": "teddy_1.jpg", "created": "2026-07-06" },
-  { "file": "teddy_2.jpg", "created": "2026-07-06" },
-  { "file": "snowflake.jpg", "created": "2026-07-06" },
-  { "file": "cat_2.jpg", "created": "2026-07-06" },
-  { "file": "double_happiness.jpg", "created": "2026-07-06" },
-  { "file": "cat_1.jpg", "created": "2026-07-06" },
-  { "file": "clover.jpg", "created": "2026-07-06" },
-  { "file": "skeleton.jpg", "created": "2026-07-06" },
-  { "file": "skull_crown_1.jpg", "created": "2026-07-06" },
-  { "file": "skull_crown_2.jpg", "created": "2026-07-06" },
-  { "file": "scream.jpg", "created": "2026-07-10" },
-  { "file": "swirl_belly.jpg", "created": "2026-07-10" },
-  { "file": "swirl_face.jpg", "created": "2026-07-10" },
-  { "file": "spoon.jpg", "created": "2026-07-10" },
-  { "file": "fork.jpg", "created": "2026-07-10" },
-  { "file": "groom.jpg", "created": "2026-07-10" },
-  { "file": "crab.jpg", "created": "2026-07-10" },
-  { "file": "octopus.jpg", "created": "2026-07-12" },
-  { "file": "david_b_character_bird.jpg", "created": "2026-07-12" },
-  { "file": "david_b_character_round_face.jpg", "created": "2026-07-12" },
-  { "file": "chinese_woman.jpg", "created": "2026-07-12" }
+  {
+    "filename": "butterfly.jpg",
+    "created": "2026-07-06",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "original_4.jpg",
+    "created": "2026-07-06",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "turtle.jpg",
+    "created": "2026-07-06",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "gingerbread_man.jpg",
+    "created": "2026-07-06",
+    "categories": ["food"]
+  },
+  {
+    "filename": "flowers.jpg",
+    "created": "2026-07-06",
+    "categories": ["plant"]
+  },
+  { "filename": "gourd.jpg", "created": "2026-07-06", "categories": ["plant"] },
+  {
+    "filename": "pineapple.jpg",
+    "created": "2026-07-06",
+    "categories": ["plant"]
+  },
+  { "filename": "bride.jpg", "created": "2026-07-06", "categories": ["toy"] },
+  { "filename": "teddy_1.jpg", "created": "2026-07-06", "categories": ["toy"] },
+  { "filename": "teddy_2.jpg", "created": "2026-07-06", "categories": ["toy"] },
+  {
+    "filename": "snowflake.jpg",
+    "created": "2026-07-06",
+    "categories": ["traditional"]
+  },
+  {
+    "filename": "cat_2.jpg",
+    "created": "2026-07-06",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "double_happiness.jpg",
+    "created": "2026-07-06",
+    "categories": ["traditional"]
+  },
+  {
+    "filename": "cat_1.jpg",
+    "created": "2026-07-06",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "clover.jpg",
+    "created": "2026-07-06",
+    "categories": ["plant"]
+  },
+  {
+    "filename": "skeleton.jpg",
+    "created": "2026-07-06",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "skull_crown_1.jpg",
+    "created": "2026-07-06",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "skull_crown_2.jpg",
+    "created": "2026-07-06",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "scream.jpg",
+    "created": "2026-07-10",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "swirl_belly.jpg",
+    "created": "2026-07-10",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "swirl_face.jpg",
+    "created": "2026-07-10",
+    "categories": ["surreal"]
+  },
+  { "filename": "spoon.jpg", "created": "2026-07-10", "categories": ["food"] },
+  { "filename": "fork.jpg", "created": "2026-07-10", "categories": ["food"] },
+  { "filename": "groom.jpg", "created": "2026-07-10", "categories": ["toy"] },
+  { "filename": "crab.jpg", "created": "2026-07-10", "categories": ["animal"] },
+  {
+    "filename": "octopus.jpg",
+    "created": "2026-07-12",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "david_b_character_bird.jpg",
+    "created": "2026-07-12",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "david_b_character_round_face.jpg",
+    "created": "2026-07-12",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "chinese_woman.jpg",
+    "created": "2026-07-12",
+    "categories": ["traditional"]
+  }
 ]

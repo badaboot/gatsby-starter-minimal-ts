@@ -13,7 +13,7 @@ interface PageProps {
     metadata: {
       edges: {
         node: {
-          file: string;
+          filename: string;
           created: string;
         };
       }[];
@@ -31,7 +31,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   );
 
   const dateMap = new Map(
-    data.metadata.edges.map(({ node }) => [node.file, node.created]),
+    data.metadata.edges.map(({ node }) => [node.filename, node.created]),
   );
 
   const images = data.images.edges
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
     metadata: allMetadataJson {
       edges {
         node {
-          file
+          filename
           created
         }
       }

@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const folders = Array.from(
     new Set(images.map((im) => im.dir.split("/").pop())),
   ).sort();
-  console.log(images);
+
   const filteredImages = filter.length
     ? images.filter((img) => img.dir.endsWith(filter))
     : images;
