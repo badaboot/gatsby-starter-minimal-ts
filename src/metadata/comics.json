@@ -1,0 +1,897 @@
+[
+  {
+    "filename": "chipmunk-winter.jpg",
+    "created": "2022-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "corgi-herd.jpg",
+    "created": "2022-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "sexist-animal-names.jpg",
+    "created": "2022-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "bathroom-music.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "buffet-library.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "inner-demons.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "monkeys-action-movie.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "university-comic-textbook.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "wanted-fragrance.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "western-art-history.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "writing-place.jpg",
+    "created": "2022-11-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "at-restaurants.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "broccoli-variant.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "eggs.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "elitist-fruit.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "emotional-fruit.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "valentine-easter-halloween.jpg",
+    "created": "2022-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "american-dream-realized.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "capitalist-fantasy.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "complaints-in-us.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "free-things-2.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "free_stuff.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "gold-rush-internet-business.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "honest-ads-2.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "immigrant-story.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "women-fashion-change.jpg",
+    "created": "2022-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "dont-flush.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "elevator_train_airplane.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "fall.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "in-name.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "kill-time.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "treadmill-neighbor.jpg",
+    "created": "2022-12-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "affordable-housing-san-francisco.jpg",
+    "created": "2022-12-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "library-slice-of-life.jpg",
+    "created": "2022-12-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "santa-in-sf.jpg",
+    "created": "2022-12-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "more-device-smarter-kids.jpg",
+    "created": "2022-12-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "past-vs-now-work.jpg",
+    "created": "2022-12-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "bugs-jobs.jpg",
+    "created": "2023-01-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "endangered-animal.jpg",
+    "created": "2023-01-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "shaved-cat.jpg",
+    "created": "2023-01-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "cannon.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "charge-napoleon.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "comedy-tragedy.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "comic-adult.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "munchkin-goya.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "phase-artist.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "statement-dress.jpg",
+    "created": "2023-01-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "banana.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "chicken-noodle-soup.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "daily-battle-food.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "freud-bakery.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "hamburger-size.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "turkey-name.jpg",
+    "created": "2023-01-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "halloween-for-adults.jpg",
+    "created": "2023-01-01",
+    "categories": ["halloween"]
+  },
+  {
+    "filename": "lanterns.jpg",
+    "created": "2023-01-01",
+    "categories": ["halloween"]
+  },
+  {
+    "filename": "three-spirits.jpg",
+    "created": "2023-01-01",
+    "categories": ["halloween"]
+  },
+  {
+    "filename": "burning-money.jpg",
+    "created": "2023-01-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "haste-makes-waste.jpg",
+    "created": "2023-01-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "read-book-online.jpg",
+    "created": "2023-01-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "sauce-techies.jpg",
+    "created": "2023-01-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "time-on-earth.jpg",
+    "created": "2023-01-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "belonging.jpg",
+    "created": "2023-02-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "desire-for-more.jpg",
+    "created": "2023-02-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "positive-thinking.jpg",
+    "created": "2023-02-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "who-has-hope.jpg",
+    "created": "2023-02-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "casino-bank.jpg",
+    "created": "2023-02-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "choose-new-job.jpg",
+    "created": "2023-02-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "food-drugs-us.jpg",
+    "created": "2023-02-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "religion-capitalism.jpg",
+    "created": "2023-02-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "break-in.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "concatenated-words.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "east-beach.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "flake-person.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "glue-candle.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "grow-up-cattle.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "jack-belittle.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "toxic-personality.jpg",
+    "created": "2023-02-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "california-rain.jpg",
+    "created": "2023-02-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "sf-hotel.jpg",
+    "created": "2023-02-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "sf-internship.jpg",
+    "created": "2023-02-01",
+    "categories": ["san-francisco"]
+  },
+  {
+    "filename": "bottleneck.jpg",
+    "created": "2023-04-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "canadian_animals.jpg",
+    "created": "2023-04-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "sexist_names.jpg",
+    "created": "2023-04-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "zoos.jpg",
+    "created": "2023-04-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "bar.jpg",
+    "created": "2023-04-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "core.jpg",
+    "created": "2023-04-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "firm.jpg",
+    "created": "2023-04-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "head.jpg",
+    "created": "2023-04-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "weather.jpg",
+    "created": "2023-04-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "beret.jpg",
+    "created": "2023-04-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "push_buttons.jpg",
+    "created": "2023-04-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "red_eye.jpg",
+    "created": "2023-04-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "rings.jpg",
+    "created": "2023-04-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "fabricated.jpg",
+    "created": "2023-04-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "monitor.jpg",
+    "created": "2023-04-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "campbells.jpg",
+    "created": "2023-12-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "operas.jpg",
+    "created": "2023-12-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "cobbler.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "crabs.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "culture.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "filling.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "heirloom_tomatos.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "melt.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "menu.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "more_tomatos.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "tomato.jpg",
+    "created": "2023-12-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "three-type.jpg",
+    "created": "2023-12-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "three_ball.jpg",
+    "created": "2023-12-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "american_dream.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "college_courses.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "entertainer.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "liberated_woman.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "mirror_fairy.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "university.jpg",
+    "created": "2023-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "tech_AI.jpg",
+    "created": "2023-12-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "bad-baby-names.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "broken.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "fiction_genres.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "grill.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "human-brain.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "king-queen.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "me-comics-iceberg.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "me-vs-nihilism.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "post_social_media.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "raincoat-movie.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "rap-album.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "recycled.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "vacation-actual-fantasy.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "women-in-ads.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "wordsmith.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "work.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "writer-pantry.jpg",
+    "created": "2024-10-01",
+    "categories": ["art"]
+  },
+  {
+    "filename": "canned.jpg",
+    "created": "2024-10-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "fluffy.jpg",
+    "created": "2024-10-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "soups.jpg",
+    "created": "2024-10-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "babies.jpg",
+    "created": "2024-10-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "some-days.jpg",
+    "created": "2024-10-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "offline_reconnect.jpg",
+    "created": "2024-10-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "time_spent.jpg",
+    "created": "2024-10-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "delivery-nurse-strike.jpg",
+    "created": "2024-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "flying-animals.jpg",
+    "created": "2024-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "moles.jpg",
+    "created": "2024-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "rescue-dogs.jpg",
+    "created": "2024-11-01",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "cake-panettone.jpg",
+    "created": "2024-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "empty-inside-club.jpg",
+    "created": "2024-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "my-jam-runners-high.jpg",
+    "created": "2024-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "rare.jpg",
+    "created": "2024-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "serve-soft-sports.jpg",
+    "created": "2024-11-01",
+    "categories": ["food"]
+  },
+  {
+    "filename": "compliment-past-now.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "dating-writer.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "in-love-feels.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "job-interview-dating.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "memory-loops.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "regency-romance.jpg",
+    "created": "2024-11-01",
+    "categories": ["love"]
+  },
+  {
+    "filename": "cruelty.jpg",
+    "created": "2024-11-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "masks.jpg",
+    "created": "2024-11-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "quarter-crisis.jpg",
+    "created": "2024-11-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "quiet-types.jpg",
+    "created": "2024-11-01",
+    "categories": ["random"]
+  },
+  {
+    "filename": "busy-levels.jpg",
+    "created": "2024-11-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "fast-art.jpg",
+    "created": "2024-11-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "magic.jpg",
+    "created": "2024-11-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "telephone.jpg",
+    "created": "2024-11-01",
+    "categories": ["technology"]
+  },
+  {
+    "filename": "advertising-words.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "banks-bailout.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "bronchitis.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "buy-now-pay-later.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "converse-shoe.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "dream-job.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "holiday-wish.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "honest-ads.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "hotel-hospital-venn.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "leisure.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "media-vs-free-speech.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "people-no-money-worries.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "perfume-liquor-venn.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "retirement-conversation.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "shopaholic-closet.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "uni-course.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  },
+  {
+    "filename": "us-canada-elephant.jpg",
+    "created": "2024-12-01",
+    "categories": ["money"]
+  }
+]

@@ -10,6 +10,15 @@ interface PageProps {
     images: {
       edges: ImageSharpEdge[];
     };
+    comics: {
+      edges: {
+        node: {
+          filename: string;
+          created: string;
+          categories: string[];
+        };
+      }[];
+    };
   };
 }
 
@@ -21,20 +30,38 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   const [filter, setFilter] = React.useState(
     isSSR ? "" : params.get("filter") || "",
   );
+
+  const metadataMap = new Map(
+    data.comics.edges.map(({ node }) => [node.filename, node]),
+  );
+
   const images = data.images.edges
     .filter(({ node }) => node.childImageSharp)
-    .map(({ node }) => ({
-      ...node.childImageSharp,
-      dir: node.dir,
-      modifiedTime: node.modifiedTime,
-      name: node.childImageSharp.thumb?.images.fallback?.src.split("/").pop(),
-    }));
+    .map(({ node }) => {
+      const name = node.childImageSharp.thumb?.images.fallback?.src
+        .split("/")
+        .pop();
+      const meta = metadataMap.get(name);
+      return {
+        ...node.childImageSharp,
+        dir: node.dir,
+        name,
+        created: meta?.created,
+        categories: meta?.categories ?? [],
+      };
+    })
+    .sort((a, b) => {
+      const dateA = a.created ?? "0000-00-00";
+      const dateB = b.created ?? "0000-00-00";
+      return dateB.localeCompare(dateA);
+    });
+
   const folders = Array.from(
-    new Set(images.map((im) => im.dir.split("/").pop())),
+    new Set(images.flatMap((img) => img.categories)),
   ).sort();
 
   const filteredImages = filter.length
-    ? images.filter((img) => img.dir.endsWith(filter))
+    ? images.filter((img) => img.categories.includes(filter))
     : images;
 
   return (
@@ -50,10 +77,7 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
       <FilterBar folders={folders} filter={filter} setFilter={setFilter} />
       <MyGallery
         images={filteredImages}
-        captionFn={(img) => {
-          const folderName = img.dir.split("/").at(-2);
-          return `${img.name} ${folderName}`;
-        }}
+        captionFn={(img) => `${img.name} ${img.created}`}
       />
     </Layout>
   );
@@ -62,13 +86,11 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 export const pageQuery = graphql`
   query ImagesForGallery {
     images: allFile(
-      sort: { modifiedTime: DESC }
-      filter: { relativeDirectory: { regex: "/^((?!paper-cutting).)*$/" } }
+      filter: { relativeDirectory: { regex: "/gallery/" } }
     ) {
       edges {
         node {
           dir
-          modifiedTime
           childImageSharp {
             full: gatsbyImageData(layout: FIXED, width: 700)
             thumb: gatsbyImageData(
@@ -77,6 +99,15 @@ export const pageQuery = graphql`
               placeholder: BLURRED
             )
           }
+        }
+      }
+    }
+    comics: allComicsJson {
+      edges {
+        node {
+          filename
+          created
+          categories
         }
       }
     }
