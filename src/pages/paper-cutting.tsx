@@ -59,7 +59,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <Header siteTitle="Paper cuttings"></Header>
-
+      <p>
+        These paper cuts are made by hand with a pair of scissors and an exacto
+        knife. They're inspired by Chinese paper cuts (jianzhi).
+      </p>
       <p>
         Click on an image to see detail. Click on a filter to filter images.
       </p>

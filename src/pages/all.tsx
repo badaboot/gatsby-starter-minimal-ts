@@ -40,7 +40,10 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
       <Header siteTitle="Anny's comics"></Header>
-
+      <p>
+        These comics are made by hand with a Sharpie and post-it notes. They're
+        inspired by my life events.
+      </p>
       <p>
         Click on an image to see detail. Click on a filter to filter images.
       </p>
