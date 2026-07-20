@@ -111,5 +111,30 @@
     "filename": "chinese_woman.jpg",
     "created": "2026-07-12",
     "categories": ["traditional"]
+  },
+  {
+    "filename": "fish_bones.jpg",
+    "created": "2026-07-19",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "window_two.jpg",
+    "created": "2026-07-19",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "fish.jpg",
+    "created": "2026-07-19",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "swan.jpg",
+    "created": "2026-07-19",
+    "categories": ["animal"]
+  },
+  {
+    "filename": "boots.jpg",
+    "created": "2026-07-19",
+    "categories": ["fashion"]
   }
 ]
