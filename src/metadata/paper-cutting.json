@@ -136,5 +136,35 @@
     "filename": "boots.jpg",
     "created": "2026-07-19",
     "categories": ["fashion"]
+  },
+  {
+    "filename": "axo_vampire.jpg",
+    "created": "2026-07-27",
+    "categories": ["surreal"]
+  },
+  {
+    "filename": "bunbun_lads.jpg",
+    "created": "2026-07-27",
+    "categories": ["toy"]
+  },
+  {
+    "filename": "flower_1.jpg",
+    "created": "2026-07-27",
+    "categories": ["plant"]
+  },
+  {
+    "filename": "flower_2.jpg",
+    "created": "2026-07-27",
+    "categories": ["plant"]
+  },
+  {
+    "filename": "flower_3.jpg",
+    "created": "2026-07-27",
+    "categories": ["plant"]
+  },
+  {
+    "filename": "star_flower.jpg",
+    "created": "2026-07-27",
+    "categories": ["animal"]
   }
 ]
