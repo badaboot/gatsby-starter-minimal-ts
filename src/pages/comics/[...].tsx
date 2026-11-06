@@ -2,16 +2,20 @@ import { graphql } from "gatsby";
 import * as React from "react";
 import "photoswipe/dist/photoswipe.css";
 import Layout from "../../components/layout";
-import { getDateFromMMYYYY, getMonthName } from "../../utils";
+import { getMonthName } from "../../utils";
 import { MyGallery, ImageSharpEdge } from "../../components/MyGallery";
 import { FilterBar } from "../../FilterBar";
 
 interface DirImageMap {
   [key: string]: {
-    date: Date;
     images: ImageSharpEdge[];
   };
 }
+
+const getMMYYYYFromDir = (dir: string) => {
+  return dir.split("/").at(-1);
+};
+
 const MonthPage = (props) => {
   const month = props.params[`*`];
 
@@ -30,13 +34,11 @@ const MonthPage = (props) => {
     isSSR ? "" : params.get("filter") || ""
   );
   data.filter(({ node }) => {
-    const arr = node.dir.split("/");
-    // eg. arr ends with ['12-2023', 'art']. Gets 'art'
-    const folder = arr[arr.length - 2];
-    folders.add(arr.at(-1));
+    const folder = getMMYYYYFromDir(node.dir) as string;
+    folders.add(folder);
 
     if (dirImagesMap[folder] === undefined) {
-      dirImagesMap[folder] = { images: [], date: getDateFromMMYYYY(folder) };
+      dirImagesMap[folder] = { images: [] };
     }
     if ((filter.length && node.dir.endsWith(filter)) || !filter.length) {
       dirImagesMap[folder].images.push({
@@ -66,7 +68,9 @@ const MonthPage = (props) => {
               filter={filter}
               setFilter={setFilter}
             />
-            <MyGallery images={obj.images} />
+            <MyGallery 
+            captionFn={(img) => `${img.name} ${folder}`}
+            images={obj.images} />
           </div>
         );
       })}

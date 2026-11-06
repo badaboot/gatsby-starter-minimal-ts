@@ -893,5 +893,55 @@
     "filename": "us-canada-elephant.jpg",
     "created": "2024-12-01",
     "categories": ["money"]
+  },
+  {
+    "filename": "3_things_I_sold.jpg",
+    "created": "2026-11-06",
+    "categories": ["money"]
+  },
+  {
+    "filename": "AI_as_coworkers.png",
+    "created": "2026-11-06",
+    "categories": ["ai", "work"]
+  },
+  {
+    "filename": "AI_usage.jpg",
+    "created": "2026-11-06",
+    "categories": ["ai"]
+  },
+  {
+    "filename": "enginer_1.5.png",
+    "created": "2026-11-06",
+    "categories": ["ai"]
+  },
+  {
+    "filename": "ideas_not_free.jpg",
+    "created": "2026-11-06",
+    "categories": ["money"]
+  },
+  {
+    "filename": "llm_vs_not_llm.webp",
+    "created": "2026-11-06",
+    "categories": ["ai"]
+  },
+  {
+    "filename": "monkey_AI.jpg",
+    "created": "2026-11-06",
+    "categories": ["ai"]
+  },
+  {
+    "filename": "on_the_rocks.jpg",
+    "created": "2026-11-06",
+    "categories": ["misc"]
+  },
+  {
+    "filename": "speak_large_audience.webp",
+    "created": "2026-11-06",
+    "categories": ["misc"]
+  },
+  {
+    "filename": "underwear.jpg",
+    "created": "2026-11-06",
+    "categories": ["misc"]
   }
 ]

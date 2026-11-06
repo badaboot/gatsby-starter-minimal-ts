@@ -5,16 +5,15 @@ import { getMonthName, sortByMMYYYY } from "../utils";
 import Header from "../components/header";
 
 export default function HomePage({ data }) {
-  const monthToCountMap = {};
+  const monthToCountMap: Record<string, number> = {};
+
   data.allFile.nodes.forEach((o) => {
-    const arr = o.dir.split("/");
-    const _month = arr.at(-2);
-    if (monthToCountMap[_month] == undefined) {
-      monthToCountMap[_month] = 0;
-    }
-    monthToCountMap[_month] += 1;
+    const _month = o.dir.split("/").find((seg) => /^\d{2}-\d{4}$/.test(seg)); // 01-2023
+    if (!_month) return; 
+
+    monthToCountMap[_month] = (monthToCountMap[_month] ?? 0) + 1;
   });
-  // ordered by most recent
+  // {"01-2023": 24}
   const uniqueMonths: string[] = sortByMMYYYY(Object.keys(monthToCountMap));
 
   return (
@@ -30,7 +29,7 @@ export default function HomePage({ data }) {
               <li key={month}>
                 <Link to={`/comics/${month}`}>
                   <h3 className="header">{`${getMonthName(
-                    monthStr
+                    monthStr,
                   )} ${year}: +${monthToCountMap[month]}`}</h3>
                 </Link>
               </li>
@@ -42,11 +41,11 @@ export default function HomePage({ data }) {
 }
 
 export const pageQuery = graphql`
-  {
-    allFile {
-      nodes {
-        dir
-      }
+{
+  allFile(filter: { relativeDirectory: { regex: "/^gallery\\/\\d{2}-\\d{4}/" } }) {
+    nodes {
+      dir
     }
   }
+}
 `;
